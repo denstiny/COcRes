@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+DIR_MODE	fie.h	/^#define DIR_MODE /;"	d
+FILE_MODE	fie.h	/^#define FILE_MODE /;"	d
+MAXLINE	fie.h	/^#define MAXLINE /;"	d
+SIG_ERR	fie.h	/^#define SIG_ERR /;"	d
+STREND	file.c	/^#define STREND /;"	d	file:
+_APUE_H	fie.h	/^#define _APUE_H /;"	d
+_XOPEN_SOURCE	fie.h	/^#define _XOPEN_SOURCE /;"	d
+is_read_lockable	fie.h	/^#define is_read_lockable(/;"	d
+is_write_lockable	fie.h	/^#define is_write_lockable(/;"	d
+main	file.c	/^int main(int argc,char *argv[])$/;"	f	typeref:typename:int
+max	fie.h	/^#define max(/;"	d
+min	fie.h	/^#define min(/;"	d
+read_lock	fie.h	/^#define read_lock(/;"	d
+readw_lock	fie.h	/^#define readw_lock(/;"	d
+s_ges	file.c	/^STREND s_ges(char *str,int n)$/;"	f	typeref:typename:STREND
+un_lock	fie.h	/^#define un_lock(/;"	d
+write_lock	fie.h	/^#define write_lock(/;"	d
+writew_lock	fie.h	/^#define writew_lock(/;"	d
