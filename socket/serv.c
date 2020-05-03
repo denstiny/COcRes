@@ -14,7 +14,6 @@
 #define IP "127.0.0.1"
 void sys_err(char []);
 int main()
-//this main
 {
 	char str[BUFSIZ];
 	int lfd,cfd;
