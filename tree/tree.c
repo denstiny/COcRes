@@ -4,6 +4,7 @@ typedef struct Node{
     int number;
     struct Node *left;
     struct Node *right;
+
 }node;
 
 void *Init_Tree(node *tree,int nuber );//init tree struct 
