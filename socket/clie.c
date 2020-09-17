@@ -5,8 +5,8 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 #include<errno.h>
-#define PORT 6655
-#define IP "127.0.0.1"
+#define PORT 8887
+#define IP "193.112.79.5"
 //#define Size BUFSIZ
 void sys_err(char []);// 检查错误,并退出
 char *s_gets(char *);
@@ -15,6 +15,7 @@ int main()
 	int cfd;
 	//int n = 0;
 	//int Bool;//判断执行是否成功
+	pid_t id;
 	char str[BUFSIZ];
 	socklen_t serv_len;
 	struct sockaddr_in serv_addr;
@@ -32,17 +33,29 @@ int main()
 	//请求连接
 	connect(cfd,(struct sockaddr *)&serv_addr,serv_len);
 		perror("connect");
-	puts("连接成功!");
 	//while(s_gets(str) != NULL && str[0] != '\n')
-	while(1)
+	id = fork();
+	if(id == 0)
 	{
-		fgets(str,BUFSIZ,stdin);
-//		while(getchar() != '\n')
-//			continue;
-	
-		write(cfd,str,strlen(str));
-		read(cfd,str,sizeof(str));
-		puts(str);
+		while(1)
+		{
+			memset(str,0,sizeof(str));
+			read(cfd,str,sizeof(str));
+			if(read <= 0)
+			{
+				close(cfd);
+				return 0;
+			}
+			puts(str);
+		}
+	}else
+	{
+		while(1)
+		{
+			memset(str,0,sizeof(str));
+			s_gets((str));
+			write(cfd,str,strlen(str));
+		}
 	}
 	close(cfd);
 	return 0;
