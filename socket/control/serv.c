@@ -49,21 +49,20 @@ int main()
 		perror("accept");
 		exit(1);
 	}
-	while(1)
-	{
-        memset(buffer,0,sizeof(buffer));
+//	while(1)
+//	{
+//        memset(buffer,0,sizeof(buffer));
         int len = recv(conn, buffer, sizeof(buffer),0);
-        //客户端发送exit或者异常结束时，退出
-        if(strcmp(buffer,"exit\n")==0 || len<=0)
-            break;
-        printf("来自客户端数据：%s\n",buffer);
-        send(conn, buffer, len, 0);
-        printf("发送给客户端数据：%s\n",buffer);
-		
-	}
-	close(conn);
-	close(server_sockfd);
-	puts("连接成功");
-
+//        //客户端发送exit或者异常结束时，退出
+//        if(strcmp(buffer,"exit\n")==0 || len<=0)
+//            break;
+//        printf("来自客户端数据：%s\n",buffer);
+//        send(conn, buffer, len, 0);
+//        printf("发送给客户端数据：%s\n",buffer);
+//		
+//	}
+//	close(conn);
+//	close(server_sockfd);
+//	puts("连接成功");
 	return 0;
 }
