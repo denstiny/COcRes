@@ -1,0 +1,1 @@
+fcitx-rime 使用F4更换输出的语言 CTR-Alt+Del 删除匹配最前面的字符
