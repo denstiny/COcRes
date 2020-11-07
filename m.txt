@@ -1,0 +1,2 @@
+timeshift
+#xinput --disable AT\ Translated\ Set\ 2\ keyboard    禁用笔记本自带键盘

@@ -1,0 +1,17 @@
+安装 PHP
+sudo pacman -S php php-apache
+
+#修改apache配置
+sudo nano /etc/httpd/conf/httpd.conf
+
+#注释掉
+LoadModule mpm_event_module modules/mod_mpm_event.so
+
+#去掉下一行的注释
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+
+#在配置文件最后面添加
+
+LoadModule php7_module modules/libphp7.so
+AddHandler php7-script php
+Include conf/extra/php7_module.conf

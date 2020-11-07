@@ -1,0 +1,18 @@
+show databases 显示数据库
+create databases 创建一个数据库
+create databases DB_NAME charset=utf9; 创建一个数据库，并指定编码方式;
+ drop database DB_NAME; 删除数据库;
+ use DB_NAME;  使用指定的数据库
+ create table TABLE_NAME(表类型)
+
+create table stu(id int primary key auto_increment,name text,eage int);   创建一个表，并指定表的类型;
+insert into TABLE_NAME values(数据) 插入表数据;
+desc TABLE_NAME;  查询表数据类型
+-- show create TABLE_NAME;  
+select * form TABLE_NAME; 查询数据 
+show tables;  查询数据库所有表
+delete from  TABLE_NAME ；删除数据 
+
+select sname form student; 单列查询
+select sname,sno,sgentle form student;  多列查询
+
