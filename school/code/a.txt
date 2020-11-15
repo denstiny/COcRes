@@ -1,0 +1,1 @@
+http://117.167.147.139/a70.htm?wlanuserip=192.166.12.167&wlanacip=117.167.147.131&wlanacname=&vlanid=0&ip=192.166.12.167&ssid=null&areaID=null&mac=00-00-00-00-00-00

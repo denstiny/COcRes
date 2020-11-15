@@ -1,10 +1,13 @@
 #include<stdio.h>
-#include<stdlib.h>
-int main()
+int main(int argv,char *argc[])
 {
 	printf("I'm is 粉刷匠\n");
-	int a = 100,b=200,c=300;
-	printf("a+b=%d",a+b);
+	char a='a';
+	while(a < 100)
+	{
+		printf("ascll %c => %d\n",a,a);
+		a++;
+	}
 	return 0;
 }
 
