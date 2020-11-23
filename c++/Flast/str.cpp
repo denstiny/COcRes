@@ -7,6 +7,6 @@ int main()
 	long long m=0,fm=1,sum=1;
 	int n,i;
 	scanf("%d",&n);
-	printf("%c\n",n);
+	printf("%d\n",n);
 	return 0;
 }

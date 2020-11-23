@@ -7,7 +7,4 @@ int main(int argc,char *argv[])
 	dir = opendir(argv[1]);
 	while((d = readdir(dir)) != NULL)
 	printf("%s\t",d->d_name);
-	
-
-	return 0;
 }
