@@ -1,19 +1,18 @@
-#include<stdio.h>
-#include<unistdio.h>
-#include<stdlib.h>
-#include<unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <stdio.h>
+#include <dirent.h>
+#include <stdlib.h>
+#include <unistd.h>
 int main(int argc,char *argv[])
 {
-	FILE *fp;
-	char buf[] = "Hello world!";
-	char str[BUFSIZ] = {0};
-	fp  = fopen("./tem.txt","wr");
-	fwrite(buf,sizeof(char),0,fp);
-	fread(str,sizeof(str),0,fp);
-	printf("%s",str);
-	fclose(fp);
+	DIR *dp;
+	struct dirent *dirp;
+	if(argc != 2)
+		perror("usage: is directory_name");
+	if(( dp = opendir(argv[1] )) == NULL)
+		perror("can't open %s");
+	while((dirp = readdir(dp)) != NULL)
+		puts(dirp->d_name);
+	closedir(dp);
 	return 0;
 }
 

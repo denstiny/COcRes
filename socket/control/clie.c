@@ -6,8 +6,8 @@
 #include<errno.h>
 #include<arpa/inet.h>
 
-#define Port 8989
-#define Ip "193.112.79.5"
+#define Port 9909
+#define Ip "192.168.43.60"
 int main()
 {
 	int lfd = socket(AF_INET,SOCK_STREAM,0);
