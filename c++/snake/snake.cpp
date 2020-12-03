@@ -14,6 +14,13 @@ typedef struct snake
 	struct snake *Bread;
 }New_Snake;
 
+
+class CSnake
+{
+	public:
+		int a;
+		int b;
+};
 New_Snake *Init_Map(New_Snake *Node);
 New_Snake *DiawSnake();
 int main(int argc,char *argv[])
