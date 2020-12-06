@@ -172,7 +172,7 @@ void Welcome()
 	std::cout << "                                                                                " << std::endl;
 	std::cout << "                                                                                " << std::endl;
 	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ " << std::endl;
-	std::cout << "【C++语言贪吃蛇游戏】迟早编写!!! 版权所有，侵权必究!\n" << std::endl;
+	std::cout << "【C++语言贪吃蛇游戏】bilibili：有点上头的薰衣草 编写!!! \n" << std::endl;
 	std::cout << "按任意键开始游戏" << std::endl;
 	std::cout << "[上移：w ；下移：s ；左移：a ；右移：d ； 退出：q]\n" << std::endl;								
 	while(getchar() != '\n')
