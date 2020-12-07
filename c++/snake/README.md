@@ -295,8 +295,7 @@ int main(int argc,char *argv[])
 
 ## 代码演示
 
-[!Watch the video[]https://i2.hdslb.com/bfs/archive/0e04ed341fca18c9ba5287cf96bed557cd33100a.jpg@160w_100h_100Q_1c.webp)(](https://www.bilibili.com/video/BV1k54y147hH))]
+[![Watch the video](https://i2.hdslb.com/bfs/archive/0e04ed341fca18c9ba5287cf96bed557cd33100a.jpg@160w_100h_100Q_1c.webp)(](https://www.bilibili.com/video/BV1k54y147hH))]
 
-<iframe src="//player.bilibili.com/player.html?aid=843099950&bvid=BV1k54y147hH&cid=263748385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
