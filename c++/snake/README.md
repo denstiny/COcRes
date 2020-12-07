@@ -4,6 +4,12 @@
 
 #### 先定义一些初始参数
 
+
+
+`思路：定义一个地图，和一个蛇的数组，存储蛇的座标，然后循环打印`
+
+
+
 ```c++
 enum Coordinates
 {
@@ -108,6 +114,12 @@ void PrintMap()
 
 }
 ```
+
+![](/mnt/home/CocRes/c++/snake/Imager/had.png)
+
+![](/mnt/home/CocRes/c++/snake/Imager/snake.png)
+
+
 
 ### 蛇的移动就是将下一个移动的座标新增一个座标并设置为蛇头，并删除蛇尾
 
@@ -281,4 +293,6 @@ int main(int argc,char *argv[])
 }
 ```
 
+## 代码演示
 
+<iframe src="//player.bilibili.com/player.html?aid=843099950&bvid=BV1k54y147hH&cid=263748385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
