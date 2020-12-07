@@ -1,6 +1,6 @@
 ## c语言答辩作业
 
-<iframe src="//player.bilibili.com/player.html?aid=843099950&bvid=BV1k54y147hH&cid=263748385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="https//player.bilibili.com/player.html?aid=843099950&bvid=BV1k54y147hH&cid=263748385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 #### 先定义一些初始参数
 
@@ -280,4 +280,5 @@ int main(int argc,char *argv[])
 	return 0;
 }
 ```
+
 

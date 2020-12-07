@@ -39,20 +39,20 @@ void RandFood()
 
 void InitRandCoordinatesSnake(int *coordinates_snake)
 {
-	srand((unsigned)time(0));
-	int i = 0;
-	int x = 2+rand() % (X-3);
-	int y = 2+rand() % (Y-6);
-	*(coordinates_snake+1) = y;
-	*(coordinates_snake) = x;
-	int s = 0;
-	do{
-		*(coordinates_snake+i) = x;
-		*(coordinates_snake+i+1) = y+=1;
-		i+=2;
-	}while(i < 2*3);
-	food[1] = 1+rand() % (X-2);
-	food[0] = 1+rand() % (Y-2);
+ //   srand((unsigned)time(0));
+ //   int i = 0;
+ //   int x = 2+rand() % (X-3);
+ //   int y = 2+rand() % (Y-6);
+ //   *(coordinates_snake+1) = y;
+ //   *(coordinates_snake) = x;
+ //   int s = 0;
+ //   do{
+ //   	*(coordinates_snake+i) = x;
+ //   	*(coordinates_snake+i+1) = y+=1;
+ //   	i+=2;
+ //   }while(i < 2*3);
+ //   food[1] = 1+rand() % (X-2);
+ //   food[0] = 1+rand() % (Y-2);
 }
 void PrintMap()
 {
