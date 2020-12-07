@@ -278,6 +278,4 @@ int main(int argc,char *argv[])
 	return 0;
 }
 ```
-
-<video id="video" controls="" preload="none" poster="/home/Imager/a.jpg">       <source id="mp4" src="/mnt/home/CocRes/c++/snake/snake.mp4" type="video/mp4">       </video>
-
+<iframe src="//player.bilibili.com/player.html?aid=843099950&bvid=BV1k54y147hH&cid=263748385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
