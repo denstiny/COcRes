@@ -23,6 +23,8 @@ void *getch(void *ch)
 	*sch = getchar();
 	while(getchar() != '\n')
 		continue;
+	if(*sch != 'a' || *sch != 'b' || *sch != 'w'|| *sch != 's')
+		sch = NULL;
 	return sch;
 }
 void RandFood()
@@ -60,10 +62,9 @@ void PrintMap()
 		std::cout <<"    " <<"::分数::" <<Score << "::" <<std::endl;
 		std::cout <<"    " <<"::长度::" <<Score+3 << "::" << std::endl;
 	for(int i = 0; i < X; i++)
-	{
+{
 		for(int k = 0; k < Y;k++)
 		{
-			
 			if(i == 0 || i == X-1 || k == 0 || k == Y-1)
 				std::cout << ":" << "";
 			else if(map[i][k] == 99)
@@ -77,7 +78,6 @@ void PrintMap()
 		}
 		std::cout << std::endl;
 	}
-
 }
 
 int  AddHead(int *coordinates_snake,int x,int y) //移动
@@ -183,9 +183,8 @@ void Welcome()
 
 int main(int argc,char *argv[])
 {
-	Welcome();
 	pthread_t th;
-	int *coordinates_snake = new int [score*2]; //0:1 x y 
+	int *coordinates_snake = new int [score*10]; //0:1 x y 
 	int *a = new int,al = 's'; *a = 'a';
 	InitRandCoordinatesSnake(coordinates_snake); 				//初始化地图
 	RandFood();
@@ -199,7 +198,9 @@ int main(int argc,char *argv[])
 		Clear();
 		PrintMap(); 																//打印地图
 		pthread_create(&th,NULL,getch,a);
-		usleep(200000);
+		if(a == NULL)
+			*a = al;
+		usleep(100000);
 		if(*a == 'a' && al != 'd' || *a == 'd' && al != 'a' ||
 				*a == 'w' && al != 's' || *a == 's' && al != 'w' || *a == 'q')
 		{
@@ -222,5 +223,7 @@ int main(int argc,char *argv[])
 			SetMap(coordinates_snake); 													//将值带入地图中
 		}
 	}
+	delete a;
+	delete [] coordinates_snake;
 	return 0;
 }
