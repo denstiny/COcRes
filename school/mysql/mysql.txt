@@ -18,12 +18,62 @@ select sname,sno,sgentle form student;  多列查询
 truncate tabel tabele_name; 删除表
 
 alter table tabele_name 字段 新字段名 类型
-alter table class change descr koa varchar(20); 修改表单数据
+alter table tabele_name add 字段名 字段类型
+alter table class change descr koa varchar(20); 修改表单数据 
+alter table 表名 alter column 字段名 drop default; 修改表单的默认数据
+alter table 表明 modify 字段名 init unsingned;
 
 alter table tabele_name MODIFY 字段名 新字段类型
- alter table t_stu MODIFY COLUMN gender varchar(10); 修改表单数据
-  
+alter table t_stu MODIFY COLUMN gender varchar(10); 修改表单数据
+default current_timestamp on update current_timestamp,
+
 修改表单某一列的值 
 update t_stu sid=1 where snmae='张三'
          |     |               |
 		表名 修改表单数据   过滤条件
+
+数据类型
+1)  数字类型
+             整数类型 tinyint smallint mediumint int bigint
+             浮点数类型 float double
+             定点数类型 decimal
+             BIT类型 bit
+2)  时间和日期类型
+             YEAR '2020'
+             DATE  '2020-02-02'
+             TIME  '11:30:50'
+             DATETIME '2014-01-22 12:02:02'
+             TIMESTAMP '2014-01-22 12:02:02'
+							current_date  当前日期 now() 当前时间 
+2001-01-01 15:10:22
+YYYY-MM-DD HH:MM:SS
+							current_time 当前时间
+							CURRENT_TIMESTAMP 当前时间戳
+3)  字符串类型
+             char和varchar  文本数据 前者存储空间固定 后者变化
+             TEXT 大文本数据
+             ENUM 枚举类
+             SET  集合类
+             BINARY和VARBINARY  二进制数据 前者存储空间固定 后者变化
+             BLOB 大二进制数据
+4)  JSON类型
+             本质是字符串
+             JSON数组和JSON对象
+                 "{1,'abc',null,true}"
+                 "{'name':'张三','age':40}"
+表的约束
+1)  默认约束
+           字段名 数据类型 default 默认值
+2)  非空约束
+           字段名 数据类型 not null
+3)  唯一约束
+           字段名 数据类型 unique
+           或
+           unique (字段名1[,字段名2...])
+4)  主键约束
+		  字段名 数据类型 primary key
+		  或
+		  primary key(字段名1[,字段名2...])
+		  原理:
+			 通过
+			索引键值对 ，primary key 'id' (id)
