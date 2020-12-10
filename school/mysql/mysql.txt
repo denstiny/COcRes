@@ -77,3 +77,30 @@ YYYY-MM-DD HH:MM:SS
 		  原理:
 			 通过
 			索引键值对 ，primary key 'id' (id)
+5) mysql校隊字符集
+	show collation; //查找校隊字符集
+	以_cl結尾的不區分大小寫，_cs 區分大小寫，_bin 二進制文件
+	show variables like 'character%'; // 查看mysql內部設置
+	+--------------------------+----------------------------+
+	| Variable_name            | Value                      |
+	+--------------------------+----------------------------+
+	| character_set_client     | utf8                       |
+	| character_set_connection | utf8                       |
+	| character_set_database   | utf8mb4                    |
+	| character_set_filesystem | binary                     |
+	| character_set_results    | utf8                       |
+	| character_set_server     | utf8mb4                    |
+	| character_set_system     | utf8                       |
+	| character_sets_dir       | /usr/share/mysql/charsets/ |
+	+--------------------------+----------------------------+
+
+
+--- comment 註釋
+--- auto_increment 自動增長
+
+create table test(
+				id int unsigned not null key auto_increment, 		//用戶id
+				username varchar(20) not null, 						//名字
+				mobile char(11) not null, 							//電話號碼
+				gender enum('男','女', '保密') not null, 			//使用枚舉類型定義三種情況
+				reg_time timestamp default current_timestamp);      //設置默認插入時間
