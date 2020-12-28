@@ -1,0 +1,39 @@
+从命令行与github无缝协作。
+
+使用
+  gh <command> <subcommand> [flags]
+
+核心命令
+  gist:       管理要点
+  issue:      处理问题
+  pr:         管理请求请求
+  release:    管理github版本
+  repo:       创建，克隆，派生和查看存储库
+
+ADDITIONAL COMMANDS
+  alias:      创建命令快捷方式
+  api:        发出经过身份验证的github API请求
+  auth:       登录，注销和刷新身份验证
+  completion: 生成外壳完成脚本
+  config：管理gh的配置
+  help：关于任何命令的帮助
+
+FLAGS
+  --help      Show help for command
+  --version   Show gh version
+
+EXAMPLES
+  $ gh issue create
+  $ gh repo clone cli/cli
+  $ gh pr checkout 321
+
+ENVIRONMENT VARIABLES
+  See 'gh help environment' for the list of supported environment variables.
+
+LEARN MORE
+  Use 'gh <command> <subcommand> --help' for more information about a command.
+  Read the manual at https://cli.github.com/manual
+
+FEEDBACK
+  Open an issue using 'gh issue create -R github.com/cli/cli'
+

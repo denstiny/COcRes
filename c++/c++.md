@@ -30,7 +30,17 @@ int main()
 }
 ```
 
-
+```c++
+template<typename t>
+class complex
+{
+public: 
+		pass
+private:
+	t re,im;
+}
+complex<int> 
+```
 
 
 
