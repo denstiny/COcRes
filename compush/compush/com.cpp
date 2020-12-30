@@ -6,7 +6,7 @@
 #include<fstream>
 #include<strings.h>
 #elif WIN32 || _WIN32
-"windows系统运行尼玛"
+"windows系统运行尼玛 想用就装linux"
 #endif
 
 
@@ -66,7 +66,10 @@ NewQueue* InserQueue(NewQueue *head,NewQueue *TempNode,int str)
 	else
 	{
 		if((Node = TraverseStr(head,str)) != NULL)
+		{
 			Node->size += 1;
+			delete TempNode;
+		}
 		else
 		{
 			Node = Traverse(head);
@@ -88,7 +91,7 @@ const NewQueue * TraverseCout(NewQueue *header)
 	NewQueue *temp = header;
 	while(header != NULL && temp != NULL)
 	{
-		std::cout << "ASCLI: " <<temp->ASCLI << std::endl;
+		std::cout << "ASCLI: " << (char)temp->ASCLI << "  SUM" << header->sum << std::endl;
 		temp = temp->next;
 	}
 	return NULL;
@@ -113,7 +116,7 @@ int main(int argc,char *argv[])  // argv[1] --> File argv[2] --> New file
 		{
 			NewQueue *temp  = new NewQueue;
 			InitNode(temp);
-			std::cout <<  st << std::endl;
+			//std::cout <<  st << std::endl;
 			InserQueue(Root,temp,*st);
 		}
 	}

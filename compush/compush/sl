@@ -195,7 +195,7 @@ DESCRIPTION
 
        1      if minor problems (e.g., cannot access subdirectory),
 
-       2      if serious trouble (e.g., cannot access command-line argument).
+       2      if serious trouble (e.g., cannot access command-line argument).  
 
 AUTHOR
        Written by Richard M. Stallman and David MacKenzie.
@@ -212,4 +212,4 @@ SEE ALSO
        Full documentation <https://www.gnu.org/software/coreutils/ls>
        or available locally via: info '(coreutils) ls invocation'
 
-GNU coreutils 8.32                                                       March 2020                                                                   LS(1)
+ GNU coreutils 8.32                                                       March 2020                                                                   LS(1)
