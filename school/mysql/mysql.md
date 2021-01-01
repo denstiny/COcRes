@@ -123,3 +123,11 @@ foreign key (建名) refern 表名(列表)
  =  等于
  <>,!=  不等于
  > 	大于
+
+
+
+ #  创建用户
+create user 'username'  			创建用户 
+select host,user from mysql.user;  查询用户创建情况
+create user 'username'@'localhost' identified by '123456';
+select plugin,authentication_string from  mysql.user where user='test1';
