@@ -35,6 +35,7 @@ NewQueue *TraverseQueue(NewQueue *header,int* str)
 
 NewQueue *InsertQueue(NewQueue *header,NewQueue *node,int str)
 {
+	
 	return NULL;
 }
 
