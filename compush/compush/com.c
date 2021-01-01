@@ -51,7 +51,7 @@ int main(int argc,char *argv[])
 		InitNode(node,*string);
 		*string = fgetc(file);
 		putchar(*string);
-		InsertQueue(header,node,string);
+		InsertQueue(header,node,*string);
 		size++;
 	}
 	printf("size ==> %d\n",size);
