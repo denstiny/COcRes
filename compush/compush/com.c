@@ -16,12 +16,11 @@ typedef struct Queue
 	struct Queue * last;
 }NewQueue;
 
-
 NewQueue* InitNode(NewQueue *Node,int str)
 {
 	Node->ASCLI = str;
 	Node->sum = 0;
-	Node->size = 1;
+	Node->size = 0;
 	Node->next = NULL;
 	Node->last = NULL;
 	return Node;
@@ -85,9 +84,13 @@ int main(int argc,char *argv[])
 			free(node);
 		size++;
 	}
-	printf("node ==> %c\n",header->ASCLI);
-	printf("sum ==> %d\n",size);
-	printf("size ==> %d\n",header->size);
+	while(header!= NULL)
+	{
+		printf("node ==> %d\t",header->ASCLI);
+		printf("size ==> %d\t",header->size);
+		printf("sum ==> %d\n\n",header->sum);
+		header = header->next;
+	}
 	fclose(file);
 	return 0;
 }
