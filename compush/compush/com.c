@@ -4,7 +4,7 @@
 #ifdef linux 
 #include<unistd.h>
 #elif WIN32 || _WIN32
-"This can run on linux"
+"傻逼，用你妈的windoiws"
 #endif
 
 typedef struct Queue
@@ -27,12 +27,6 @@ NewQueue* InitNode(NewQueue *Node,int str)
 	return Node;
 }
 
-NewQueue *TraverseQueue(NewQueue *header) //Traverse queue node ,or queue->ASCLI == str ,return Node or return NULL
-{
-	while(header->next != NULL)
-		header = header->next;
-	return header;
-}
 NewQueue *TraverseQueueStr(NewQueue *header,int str) // Traverse queue ASCLI = str the node
 {
 	while(header->ASCLI != str && header->next != NULL)
@@ -91,8 +85,9 @@ int main(int argc,char *argv[])
 			free(node);
 		size++;
 	}
-	printf("node ==> %d\n",header->ASCLI);
-	printf("size ==> %d\n",size);
+	printf("node ==> %c\n",header->ASCLI);
+	printf("sum ==> %d\n",size);
+	printf("size ==> %d\n",header->size);
 	fclose(file);
 	return 0;
 }
