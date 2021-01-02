@@ -4,7 +4,7 @@
 #ifdef linux 
 #include<unistd.h>
 #elif WIN32 || _WIN32
-"error"
+"This can run on linux"
 #endif
 
 typedef struct Queue
@@ -27,35 +27,57 @@ NewQueue* InitNode(NewQueue *Node,int str)
 	return Node;
 }
 
-NewQueue *TraverseQueue(NewQueue *header,int* str)
+NewQueue *TraverseQueue(NewQueue *header)
 	//Traverse queue node ,or queue->ASCLI == str ,return Node or return NULL
 {
-	return NULL;
+	while(header->next != NULL)
+		header = header->next;
+	return header;
 }
 
 NewQueue *InsertQueue(NewQueue *header,NewQueue *node,int str)
 {
-	
+	NewQueue * tempNode = NULL; // new temp node ,temp node = node ->last;
+	if(header == NULL)
+	{
+		header = node;
+		return node;
+	}
+	else {
+		tempNode = TraverseQueue(header);
+		tempNode->next = node;
+		node->last = tempNode;
+		header->sum += 1;
+	}
 	return NULL;
 }
 
 int main(int argc,char *argv[])
 {
+
+
 	char *string = (char*)malloc(sizeof(char));
-	NewQueue *header = malloc(sizeof(NewQueue));
+	NewQueue * header = NULL;
 	int size = 0;
 	FILE *file = NULL;
+	
+
 	file = fopen(argv[1],"rd");
 	while(!feof(file))
 	{
 		NewQueue * node = malloc(sizeof(NewQueue));
-		InitNode(node,*string);
+		
 		*string = fgetc(file);
 		putchar(*string);
-		if(InsertQueue(header,node,*string) == NULL)
+
+		//初始化新节点
+		node = InitNode(node,*string);
+
+		if((header = InsertQueue(header,node,*string))== NULL)
 			free(node);
 		size++;
 	}
+	printf("node ==> %d\n",header->ASCLI);
 	printf("size ==> %d\n",size);
 	fclose(file);
 	return 0;
