@@ -27,10 +27,15 @@ NewQueue* InitNode(NewQueue *Node,int str)
 	return Node;
 }
 
-NewQueue *TraverseQueue(NewQueue *header)
-	//Traverse queue node ,or queue->ASCLI == str ,return Node or return NULL
+NewQueue *TraverseQueue(NewQueue *header) //Traverse queue node ,or queue->ASCLI == str ,return Node or return NULL
 {
 	while(header->next != NULL)
+		header = header->next;
+	return header;
+}
+NewQueue *TraverseQueueStr(NewQueue *header,int str) // Traverse queue ASCLI = str the node
+{
+	while(header->ASCLI != str && header->next != NULL)
 		header = header->next;
 	return header;
 }
@@ -41,15 +46,24 @@ NewQueue *InsertQueue(NewQueue *header,NewQueue *node,int str)
 	if(header == NULL)
 	{
 		header = node;
-		return node;
+		return header;
 	}
 	else {
-		tempNode = TraverseQueue(header);
-		tempNode->next = node;
-		node->last = tempNode;
-		header->sum += 1;
+		tempNode = TraverseQueueStr(header,str);
+		if(tempNode->ASCLI == str)
+		{
+			tempNode->size += 1;
+			return header;
+		}
+		else
+		{
+			tempNode->next = node;
+			node->last = tempNode;
+			node->size += 1;
+			header->sum += 1;
+		}
 	}
-	return NULL;
+	return header;
 }
 
 int main(int argc,char *argv[])
