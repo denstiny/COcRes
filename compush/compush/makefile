@@ -8,6 +8,7 @@ i:
 	#g++ com.cpp -g -o com
 	gcc com.c -g -o com
 	gcc compression.c -lz -o compression
+	gcc jie.c -lz -o jie
 config:
 	cp config.h config_def.h
 	cp main.cpp main_def.cpp

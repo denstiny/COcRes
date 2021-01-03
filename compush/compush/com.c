@@ -89,6 +89,7 @@ int main(int argc,char *argv[])
 		printf("sum ==> %d\n\n",header->sum);
 		fputc(header->ASCLI,NewFile);
 		header = header->next;
+		free(header->last);
 	}
 	fclose(file);
 	fclose(NewFile);

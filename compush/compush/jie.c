@@ -1,11 +1,10 @@
+
 #include <stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<unistd.h>
 #include <zlib.h>
 #define size 1024
-
-
 int main(int argc,char *argv[])
 {
     /* 原始数据 */
@@ -17,23 +16,15 @@ int main(int argc,char *argv[])
     unsigned long dstLen = sizeof(strDst);
 	FILE * file = NULL,*newfile = NULL;
 	file = fopen(argv[1],"rd");
-	newfile = fopen(argv[2],"wd");
+	newfile  = fopen(argv[2],"wd");
 	while(!feof(file))
 	{
-		fgets((char *)strSrc,size,file);
-		compress(buf,&bufLen,strSrc,srcLen);
-		printf("%s\n",buf);
-		fputs((const char *)buf,newfile);
+		fgets(buf,bufLen,file);
+		uncompress(strDst, &dstLen, buf, bufLen);
+		fputs(strDst,newfile);
 	}
-	fclose(file);
 	fclose(newfile);
-    //printf("Src string:%s\nLength:%ld\n", strSrc, srcLen);
-	//
-    ///* 压缩 */
-    //compress(buf, &bufLen, strSrc, srcLen);
-
-    ///* 解压缩 */
-    //uncompress(strDst, &dstLen, buf, bufLen);
+	fclose(file);
     //printf("After UnCompressed Length:%ld\n",dstLen);
 
     //printf("UnCompressed String:%s\n",strDst);
