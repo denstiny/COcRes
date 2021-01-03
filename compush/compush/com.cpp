@@ -1,27 +1,20 @@
 //压缩程序
 #ifdef linux
 #include<iostream>
+#include "config.h"
 #include<cstring>
 #include<cstdlib>
 #include<fstream>
 #include<strings.h>
 #elif WIN32 || _WIN32
-"windows系统运行尼玛 想用就装linux"
+"error: windows no use!"
 #endif
 
 
-typedef struct Queue
-{
-	int ASCLI; // char in queue str
-	int sum;   // sizeof Queue node number
-	int size;  // str sizeof in queue node
-	struct Queue * next;
-	struct Queue * last;
-}NewQueue;
 
 
 
-int InitNode(NewQueue *Node,int str = 0)
+int InitNode(NewQueue *Node,int str)
 {
 	Node->ASCLI = str;
 	Node->sum = 0;
@@ -115,7 +108,7 @@ int main(int argc,char *argv[])  // argv[1] --> File argv[2] --> New file
 		while(*(++st)!='\n')
 		{
 			NewQueue *temp  = new NewQueue;
-			InitNode(temp);
+			//InitNode(temp,str);
 			//std::cout <<  st << std::endl;
 			InserQueue(Root,temp,*st);
 		}

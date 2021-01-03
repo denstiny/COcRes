@@ -20,10 +20,10 @@ int main(int argc,char *argv[])
 	newfile = fopen(argv[2],"wd");
 	while(!feof(file))
 	{
-		fgets((char *)strSrc,size,file);
+		fread(strSrc,srcLen,0,file);
 		compress(buf,&bufLen,strSrc,srcLen);
 		printf("%s\n",buf);
-		fputs((const char *)buf,newfile);
+		fwrite(buf,srcLen,0,newfile);
 	}
 	fclose(file);
 	fclose(newfile);
