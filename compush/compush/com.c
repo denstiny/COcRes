@@ -62,14 +62,12 @@ NewQueue *InsertQueue(NewQueue *header,NewQueue *node,int str)
 int main(int argc,char *argv[])
 {
 
-
 	char *string = (char*)malloc(sizeof(char));
 	NewQueue * header = NULL;
 	int size = 0;
-	FILE *file = NULL;
-	
 
-	file = fopen(argv[1],"rd");
+	FILE *file = fopen(argv[1],"rd");
+	FILE *NewFile = fopen(argv[2],"wd");
 	while(!feof(file))
 	{
 		NewQueue * node = malloc(sizeof(NewQueue));
@@ -89,8 +87,10 @@ int main(int argc,char *argv[])
 		printf("node ==> %d\t",header->ASCLI);
 		printf("size ==> %d\t",header->size);
 		printf("sum ==> %d\n\n",header->sum);
+		fputc(header->ASCLI,NewFile);
 		header = header->next;
 	}
 	fclose(file);
+	fclose(NewFile);
 	return 0;
 }
