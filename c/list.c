@@ -1,5 +1,3 @@
-ch &盘-盘pc语言双向链表
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -265,6 +263,9 @@ void char_new3(new *_sb,struct _mvname* sb)
 	print(_sb);
 }
 void char_new4(new* sb, new* sb1,new *sb4)//sb=head	sb1=找到的节点位置
+	 Conflicting types for 'char_new4'
+	 [clang: conflicting_types]
+
 {
 	//new* sb2 = NULL, * sb3 = NULL;
 	

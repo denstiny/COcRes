@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
 	return 0;
 }
 
-template <> void Swap<int>(int &a,int &b)
+template < > void Swap<int>(int &a,int &b)
 {
 	 cout << "a -=> " << a << " | " << "b -=> " << b << endl;
 }
