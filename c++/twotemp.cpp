@@ -15,7 +15,6 @@ int Swap(T &t)
 }
 int main(int argc,char *argv[])
 {
-	 int n = 10, s = 1;
 	 char cs = 's',cn = 'n';
 	 
 	 cout << cn << Swap(cn) << endl;
