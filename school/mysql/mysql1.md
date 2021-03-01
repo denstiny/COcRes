@@ -90,10 +90,12 @@ DROP DATABASE IF EXISTS idb;
 CREATE DATABASE IF NOT EXISTS idb;
 -- 此处填写单行注释内容，如：若服务器中存在mydb数据库，则删除，否则忽略此SQL
 DROP DATABASE IF EXISTS idb;
+
 /* 
 此处填写多行注释内容
 如：利用以下SQL查看当前服务器中的所有数据库
 */
+
 SHOW DATABASES;
 
 
