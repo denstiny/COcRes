@@ -1,6 +1,7 @@
 #include "../include/Staff.h"
 #include <iostream>
 #include <stdio.h>
+#include <cstring>
 
 Company::Company() {
 	obs.open(FILENAME,ios::binary | ios::app | ios::in);
@@ -90,4 +91,39 @@ void Company::CloseCompany() {
 		obs.close();
 		Company();
 	}
+}
+
+// 查找员工数据
+bool Company::SeleEmploy(char bufName[100],Employees& p) {
+	SetLenEmploy();
+	for(int i = 0;i < len && !obs.eof() ;i++) {
+		ReadFileClass(p);
+		if(strcmp(bufName, p.EmployName))
+			return true;
+	}
+	return false;
+}
+// 删除员工信息
+void Company::DeleEmploy() {
+	char bufName[100];
+	Employees p;
+	cout << "Input EmployName in file select: ";
+	cin >> bufName;
+	if(SeleEmploy(bufName, p)) {
+		cout << p.EmployName << " " << p.EmployAge << " " << p.Emaployposition << endl;
+		cout << "if you delect that (y/n):";
+		char temp;
+		cin >> temp;
+		if(temp == 'y') {
+			// 临时保存员工数据，提取出要删除的数据，然后保存
+		}
+	}else {
+		cout << "error! No select Employ" << endl;
+	}
+}
+
+
+Employees * Company::SaveEmpoly(Employees &p) {
+	// -- to do --
+	return &p;
 }

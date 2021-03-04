@@ -38,6 +38,10 @@ class Company {
 		void CloseCompany();
 		// 删除员工数据
 		void DeleEmploy();
+		// 查找员工信息
+		bool SeleEmploy(char bufName[100],Employees &p);
+		// 临时存储员工信息
+		Employees* SaveEmpoly(Employees &p);
 		Company();
 		~Company();
 };
