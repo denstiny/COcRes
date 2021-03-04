@@ -1,0 +1,20 @@
+// 课程表
+create table course(
+                       week varchar(3),
+                       course varchar(100),
+                       tercher varchar(100));
+// 学期表
+create table semester
+                        (
+                        id int not null,
+                        times int(2),
+                        note varchar(200));
+
+// 学生成绩表
+create table results
+                       (
+                       id int not null,
+                       student varchar(20),
+                       course varchar(100),
+                       score float(5));
+

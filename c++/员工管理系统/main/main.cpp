@@ -19,13 +19,12 @@ int main(int argc,char *argv[]) {
 			case 0: // 退出
 				return 0;
 			case 1: // 添加
-				p.Add_Members();
+				p.WriteDate();
 				break;
 			case 2: // 显示
-				p.Show_Select_Class();
+				p.List_employees();
 				break;
 			case 3: // 删除
-				p.Delelat_Menbers();
 				break;
 			case 4: // 修改
 				break;
@@ -34,15 +33,13 @@ int main(int argc,char *argv[]) {
 			case 6: // 排序 
 				break;
 			case 7: // 清空
+				p.Clear_class();
 				break;
 			default:
 				system("clear");
 				break;
 		}
-		
-		
-		p.Show_Menu();
-		cout << "输入你的选择" << endl;
+		cout << "重新选择" << endl;
 		cin >> chios;
 	}
 	return 0;
