@@ -1,3 +1,20 @@
+/**
+ * src/Staff.cpp
+ * Copyright (c) 2021 denstiny Anonymity <2254228017@qq.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 #include "../include/Staff.h"
 #include <iostream>
 #include <stdio.h>
@@ -10,7 +27,7 @@ Company::Company() {
 		if(!obs.is_open()) {
 		}
 	}
-	// 设置员工人数
+	// 同步员工人数
 	SetLenEmploy();
 }
 
@@ -32,7 +49,7 @@ void Company::ShowMenu() {
 // 写入数据
 bool Company::WriteFileClass(Employees&p) {
 	obs.write((char *)&p, sizeof(Employees));
-	SetLenEmploy();
+	len++;
 	return true;
 }
 
@@ -63,7 +80,6 @@ bool Company::ReadFileClass(Employees &p) {
 
 bool Company::ObtainEmploy() {
 	Employees p;
-	SetLenEmploy();
 	for(int i=0;i < len && !obs.eof();i++) {
 		ReadFileClass(p);
 		printf("%s %d %s \n",p.EmployName,p.EmployAge,p.Emaployposition);
@@ -89,7 +105,13 @@ void Company::CloseCompany() {
 		obs.close();
 		obs.open(FILENAME,ios::trunc | ios::out);
 		obs.close();
-		Company();
+		len = 0;
+		obs.open(FILENAME,ios::binary | ios::app | ios::in);
+		if(!obs.is_open()) {
+			obs.open(FILENAME,ios::out | ios::in | ios::out);
+			if(!obs.is_open()) {
+			}
+		}
 	}
 }
 
@@ -106,7 +128,7 @@ bool Company::SeleEmploy(char bufName[100],Employees& p) {
 // 删除员工信息
 void Company::DeleEmploy() {
 	char bufName[100];
-	Employees p;
+	Employees p,* header;
 	cout << "Input EmployName in file select: ";
 	cin >> bufName;
 	if(SeleEmploy(bufName, p)) {
@@ -116,14 +138,30 @@ void Company::DeleEmploy() {
 		cin >> temp;
 		if(temp == 'y') {
 			// 临时保存员工数据，提取出要删除的数据，然后保存
+			SaveEmpoly(header, p);
+			// 清空员工数据 
+			CloseCompany();
+			// 重新写入
+			// -- to do --
 		}
 	}else {
 		cout << "error! No select Employ" << endl;
 	}
 }
 
-
-Employees * Company::SaveEmpoly(Employees &p) {
+// 临时保存员工数据
+Employees * Company::SaveEmpoly(Employees *p,Employees s) {
+	// 									存储数据 	提取数据
 	// -- to do --
-	return &p;
+	p = new Employees[len];
+	Employees temp;
+	for(int i = 0,n = 0;i < len && !obs.eof() ;i++) {
+		ReadFileClass(temp);
+		// 如果 找到了数据执行跳过，不保存
+		if(strcmp(s.EmployName, temp.EmployName))
+			continue;
+		p[n] = temp;
+		n++;
+	}
+	return p;
 }

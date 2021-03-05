@@ -13,6 +13,7 @@ class Employees{
 		int EmployAge;
 		// 员工信息
 		char Emaployposition[100];
+		long len;
 };
 
 // 公司类
@@ -41,7 +42,7 @@ class Company {
 		// 查找员工信息
 		bool SeleEmploy(char bufName[100],Employees &p);
 		// 临时存储员工信息
-		Employees* SaveEmpoly(Employees &p);
+		Employees* SaveEmpoly(Employees *p,Employees s);
 		Company();
 		~Company();
 };
