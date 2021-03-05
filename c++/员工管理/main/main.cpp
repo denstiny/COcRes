@@ -45,9 +45,11 @@ int main(int argc,char *argv[]) {
 				break;
 			case 5:
 				// 删除员工数据
+				entity.DeleEmploy();
 				break;
 			case 6:
 				// 修改员工数据
+				entity.ModifyEmploy();
 				break;
 			case 0:
 				return 0;

@@ -43,6 +43,8 @@ class Company {
 		bool SeleEmploy(char bufName[100],Employees &p);
 		// 临时存储员工信息
 		Employees* SaveEmpoly(Employees *p,Employees s);
+		// 修改员工数据
+		void ModifyEmploy();
 		Company();
 		~Company();
 };
