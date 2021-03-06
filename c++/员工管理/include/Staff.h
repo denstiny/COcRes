@@ -21,7 +21,7 @@ class Company {
 	public:
 		friend Employees;
 		fstream obs;
-		long len;
+		long len,templen;
 		// 打印菜单
 		void ShowMenu();
 		

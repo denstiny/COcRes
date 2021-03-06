@@ -1,0 +1,28 @@
+ 1. select * from student where stusex="男" and
+                          stuage>20;
+
+ 2.
+ select * from student,course,score where stuage>20 and stuage < 3
+                         0 and cname="c语言基础" and c_id=stu_id;
+
+3.
+ select * from student,score where scocount<60 and c_id = stu_id;
+
+ 4.
+ select * from student,score where scocount>80 and c_id = stu_id;
+
+ 5.
+ select * from student,score,course,term where scocount>60 and c_id = stu_id and tname="第一学期" and  cname="c语言基础";
+ 6.
+  select * from student,score,course,term where scocount>70 and scocount < 80 and c_id = stu_id and tname="第二学期" and  cname="c语言基础";
+  7.
+   alter table term add createDate date ;
+ 8.
+  update student set stusex="男" where stuage>30 and stuage<35;
+  9.
+  delete from student where stuage>60;
+  10.
+  select * from student,term where stusex="男" and tname="第一学期";
+
+
+

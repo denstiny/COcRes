@@ -11,7 +11,7 @@
 int main()
 //sprintf 
 {
-	char *str = malloc(sizeof(char));
+	char *str =(char *) malloc(sizeof(char));
 	sprintf(str,"%d",123);
 	while(*str != '\0')
 	{

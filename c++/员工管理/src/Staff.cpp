@@ -120,7 +120,7 @@ bool Company::SeleEmploy(char bufName[100],Employees& p) {
 	SetLenEmploy();
 	for(int i = 0;i < len && !obs.eof() ;i++) {
 		ReadFileClass(p);
-		if(strcmp(bufName, p.EmployName))
+		if(!strcmp(bufName, p.EmployName))
 			return true;
 	}
 	return false;
@@ -128,21 +128,32 @@ bool Company::SeleEmploy(char bufName[100],Employees& p) {
 // 删除员工信息
 void Company::DeleEmploy() {
 	char bufName[100];
-	Employees p,* header;
+	Employees p,* header = new Employees[len-1];
 	cout << "Input EmployName in file select: ";
 	cin >> bufName;
 	if(SeleEmploy(bufName, p)) {
+		cout << "搜索结果: " << endl;
 		cout << p.EmployName << " " << p.EmployAge << " " << p.Emaployposition << endl;
 		cout << "if you delect that (y/n):";
 		char temp;
 		cin >> temp;
 		if(temp == 'y') {
 			// 临时保存员工数据，提取出要删除的数据，然后保存
+			obs.seekg(0);
 			SaveEmpoly(header, p);
+			for (int i =1 ; i < 3; i++) {
+			printf("\nheader ==>  %s  %s \n",header->EmployName,header->Emaployposition);
+			}
+			obs.seekg(0);
 			// 清空员工数据 
 			CloseCompany();
+			obs.seekg(0);
 			// 重新写入
-			// -- to do --
+			cout << "显示员工数据 " << templen << endl;
+			for(int i=0;i < templen;i++) {
+				printf("class name %s %s \n",header->EmployName,header->Emaployposition);
+				WriteFileClass(*(header+i));
+			}
 		}
 	}else {
 		cout << "error! No select Employ" << endl;
@@ -152,16 +163,25 @@ void Company::DeleEmploy() {
 // 临时保存员工数据
 Employees * Company::SaveEmpoly(Employees *p,Employees s) {
 	// 									存储数据 	提取数据
-	// -- to do --
-	p = new Employees[len];
+	templen = 0;
 	Employees temp;
 	for(int i = 0,n = 0;i < len && !obs.eof() ;i++) {
 		ReadFileClass(temp);
 		// 如果 找到了数据执行跳过，不保存
-		if(strcmp(s.EmployName, temp.EmployName))
+		if(!strcmp(s.EmployName, temp.EmployName)) {
 			continue;
-		p[n] = temp;
+		}
+		*(p+n) = temp;
+			//printf("-- temp name : %s  -- S name : %s \n",(p+n)->EmployName,temp.EmployName);
+		printf("%p %p",p->EmployName,temp.EmployName);
 		n++;
+		templen++;
 	}
 	return p;
+}
+
+
+// 修改员工数据
+void Company::ModifyEmploy() {
+	
 }

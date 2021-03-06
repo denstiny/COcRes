@@ -39,7 +39,7 @@ int main()
 	{
 		sleep(1);
 		b++;
-		pthread_create(&th,NULL,getch,a);
+	//	pthread_create(&th,NULL,getch,a);
 		std::cout << "User >> " << *a << std::endl;
 	}
 	return 0;
