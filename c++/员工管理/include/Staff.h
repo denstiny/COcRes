@@ -45,6 +45,8 @@ class Company {
 		Employees* SaveEmpoly(Employees *p,Employees s);
 		// 修改员工数据
 		void ModifyEmploy();
+		// 修改数据
+		Employees* ModifySaveEmpoly(Employees *p,Employees s);
 		Company();
 		~Company();
 };

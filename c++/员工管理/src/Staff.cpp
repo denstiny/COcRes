@@ -82,7 +82,7 @@ bool Company::ObtainEmploy() {
 	Employees p;
 	for(int i=0;i < len && !obs.eof();i++) {
 		ReadFileClass(p);
-		printf("%s %d %s \n",p.EmployName,p.EmployAge,p.Emaployposition);
+		//printf("%s %d %s \n",p.EmployName,p.EmployAge,p.Emaployposition);
 	}
 	return true;
 }
@@ -158,6 +158,7 @@ void Company::DeleEmploy() {
 	}else {
 		cout << "error! No select Employ" << endl;
 	}
+	delete [] header;
 }
 
 // 临时保存员工数据
@@ -172,8 +173,8 @@ Employees * Company::SaveEmpoly(Employees *p,Employees s) {
 			continue;
 		}
 		*(p+n) = temp;
-			//printf("-- temp name : %s  -- S name : %s \n",(p+n)->EmployName,temp.EmployName);
-		printf("%p %p",p->EmployName,temp.EmployName);
+		//printf("-- temp name : %s  -- S name : %s \n",(p+n)->EmployName,temp.EmployName);
+		//printf("%p %p",p->EmployName,temp.EmployName);
 		n++;
 		templen++;
 	}
@@ -183,5 +184,55 @@ Employees * Company::SaveEmpoly(Employees *p,Employees s) {
 
 // 修改员工数据
 void Company::ModifyEmploy() {
-	
+	char bufName[100];
+	Employees p,* header = new Employees[len];
+	cout << "Input EmployName in file select : " ;
+	cin >> bufName;
+	if(SeleEmploy(bufName, p)) { // 查找数据
+		cout << "搜索结果: "  << endl;
+		cout << p.EmployName << " " <<  p.EmployAge << " "  << p.Emaployposition << endl;
+		cout << "if you modify that (y/n): " ;
+		char temp;
+		cin >> temp;
+		if(temp == 'y') {
+			obs.seekg(0);
+			// 修改数据，并临时存储在header中
+			ModifySaveEmpoly(header, p);
+			obs.seekg(0);
+			// 清空员工数据
+			CloseCompany();
+			obs.seekg(0);
+			// 保存
+			for(int i=0;i < templen;i++) {
+				//printf("\n write header ==> %s %s \n",(header+i)->EmployName,(header+i)->Emaployposition);
+				WriteFileClass(*(header+i));
+			}
+		}
+	}else {
+	cout << "error! No select Employ" << endl;
+	}
+	delete [] header;
+}
+// 修改函数存储
+Employees* Company::ModifySaveEmpoly(Employees *p,Employees s) {
+	Employees temp;
+	templen = 0;
+	for(int i = 0,n = 0;i < len && !obs.eof();i++) {
+		ReadFileClass(temp);
+		if(!strcmp(s.EmployName, temp.EmployName)) {
+			// 如果找到数据则修改
+			cout << "input name age postition(name = 'q':exit)" << endl;
+			cin >> temp.EmployName;
+			
+			if(*temp.EmployName == 'q') 
+				return nullptr;
+				
+			cin >> temp.EmployAge;
+			cin >> temp.Emaployposition;
+		}
+		*(p+n) = temp;
+		n++;
+		templen++;
+	}
+	return p;
 }
