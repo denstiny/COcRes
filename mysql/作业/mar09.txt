@@ -1,0 +1,8 @@
+#以年龄分组，按数量从少到多展示
+select student.stuage,count(*) 
+from student group by 
+student.stuage order by count(*);
+#以学期分组，查询每个学期考试的人数，只展示及格的分数
+select term.tname,count(*) from score,course,term where score.c_id=course.cid and term.tid=course.t_id group by term.tname;
+
+ 

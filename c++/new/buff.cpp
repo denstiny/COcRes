@@ -17,5 +17,6 @@ int main(int argc,char *argv[])
 
 	 for(int b = 0;b < 100;b++)
 			cout << *(p+b) << endl;
+	 cout << "hello world" << endl;
 	 return 0;
 }

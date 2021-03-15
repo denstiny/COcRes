@@ -1,0 +1,7 @@
+a.txt
+include
+main
+makefile
+src
+temp
+test
