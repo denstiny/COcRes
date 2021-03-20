@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1fa3c3cb-2b24-4bf3-a9ec-178197047999" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/buju.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/buju/mainwindow.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/logo.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/widget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/widget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qt/logo/widget.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unix/a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unix/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unix/ls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unix/ls.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Unix/ls.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/STL/fourth.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/STL/fourth.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/new/te.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/new/te.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/员工管理/main/main" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/员工管理/main/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/员工管理/main/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/员工管理/main/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c/list.c" beforeDir="false" afterPath="$PROJECT_DIR$/../c/list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/gitclone" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/moc_widget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/moc_widget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/moc_widget.o" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/moc_widget.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/ui_widget.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/build-gitclone-Desktop-Debug/ui_widget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/gitclone/widget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/gitclone/widget.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/gitclone/widget.h" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/gitclone/widget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qt/gitclone/widget.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../qt/gitclone/widget.ui" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1q04s5Tt8epmJHoHjOlG3Jo7ccN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="1fa3c3cb-2b24-4bf3-a9ec-178197047999" name="默认变更列表" comment="" />
+      <created>1616203379201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616203379201</updated>
+      <workItem from="1616203380834" duration="163000" />
+      <workItem from="1616203573560" duration="82000" />
+      <workItem from="1616203665657" duration="230000" />
+      <workItem from="1616204114263" duration="1044000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

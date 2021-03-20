@@ -1,10 +1,24 @@
-#include<dirent.h>
 #include<stdio.h>
-int main(int argc,char *argv[])
+#include <error.h>
+#include<dirent.h>
+int main(int argc,char *argv[]) 
 {
-	DIR *dir;
-	struct dirent *d;
-	dir = opendir(argv[1]);
-	while((d = readdir(dir)) != NULL)
-	printf("%s\t",d->d_name);
+	DIR *dp;
+	struct dirent *dirp;
+	
+	if(argc != 2) {
+		printf("error is null\n");
+		return 1;
+	}
+	
+	if((dp = opendir(argv[1])) == NULL) {
+		printf("error is null\n");
+		return 1;
+	}
+	if((dirp = readdir(dp)) == NULL) {
+		printf("%s\n",dirp->d_name);
+	}
+	closedir(dp);
+	return 0;
 }
+

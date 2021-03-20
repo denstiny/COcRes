@@ -1,4 +1,6 @@
 #include "widget.h"
+#include "QMessageBox"
+#include "qprocess.h"
 #include "ui_widget.h"
 
 Widget::Widget(QWidget *parent)
@@ -23,7 +25,11 @@ void Widget::on_pushButton_clicked()
     // 创建 Qprocess 对象
     QProcess * myProcess = new QProcess(this) ;
     // 启动
-    QString cmd = "Cgit " + url;
-    myProcess->start(cmd);
-    1
+    QProcess *cmd = new QProcess(this);
+    QString cmd_shell = "Cgit " + url;
+    connect(cmd , SIGNAL(readyReadStandardOutput()) , this , SLOT(on_readoutput()));
+    connect(cmd , SIGNAL(readyReadStandardError()) , this , SLOT(on_readerror()));
+    cmd->start(cmd_shell);
 }
+
+

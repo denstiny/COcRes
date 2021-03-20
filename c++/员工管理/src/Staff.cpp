@@ -207,12 +207,13 @@ void Company::ModifyEmploy() {
 				//printf("\n write header ==> %s %s \n",(header+i)->EmployName,(header+i)->Emaployposition);
 				WriteFileClass(*(header+i));
 			}
-		}
+	}
 	}else {
 	cout << "error! No select Employ" << endl;
 	}
 	delete [] header;
 }
+
 // 修改函数存储
 Employees* Company::ModifySaveEmpoly(Employees *p,Employees s) {
 	Employees temp;

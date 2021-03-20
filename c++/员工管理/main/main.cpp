@@ -56,7 +56,6 @@ int main(int argc,char *argv[]) {
 		}
 		entity.obs.clear();
 		entity.obs.seekg(0);
-		//cout << "obs.seekg(0)" << endl;
 	}
 	return 0;
 }

@@ -14,7 +14,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
@@ -27,8 +27,7 @@ public:
     QPushButton *pushButton;
     QLabel *label;
     QToolButton *toolButton;
-    QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
+    QTextEdit *textEdit;
 
     void setupUi(QWidget *Widget)
     {
@@ -50,14 +49,9 @@ public:
         toolButton = new QToolButton(Widget);
         toolButton->setObjectName(QString::fromUtf8("toolButton"));
         toolButton->setGeometry(QRect(420, 110, 29, 30));
-        scrollArea = new QScrollArea(Widget);
-        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(70, 170, 511, 131));
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 505, 125));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        textEdit = new QTextEdit(Widget);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setGeometry(QRect(43, 175, 561, 111));
 
         retranslateUi(Widget);
 
