@@ -40,7 +40,7 @@ public class asdf {
 }
 ```
 <details>
-<summary>运行结果</summary>
+<summary>点击查看运行结果</summary>
 
 ![20210325185047](https://i.loli.net/2021/03/25/zn2qIkhVNUZ6OW7.png)
 
@@ -73,7 +73,7 @@ public class home {
 
 ```
 <details>
-<summary>运行结果</summary>
+<summary>点击查看运行结果</summary>
 
 ![20210325184910](https://i.loli.net/2021/03/25/iP7EcZHCjMdA5Rm.png)
 
@@ -103,7 +103,7 @@ public class for13 {
 
 ```
 <details>
-<summary>运行结果</summary>
+<summary>点击查看运行结果</summary>
 
 ![20210325184833](https://i.loli.net/2021/03/25/xXrqIkV7aOFH2zj.png)
 
@@ -143,7 +143,7 @@ public class For {
 ```
 
 <details>
-<summary>运行结果</summary>
+<summary>点击查看运行结果</summary>
 
 ![20210325184744](https://i.loli.net/2021/03/25/aM5kOSc1BD2WR8T.png)
 
@@ -182,7 +182,7 @@ public class oushu {
 ```
 
 <details>
-<summary>运行结果</summary>
+<summary>点击查看运行结果</summary>
 
 ![20210325184614](https://i.loli.net/2021/03/25/sbM8BIxVST9udzA.png)
 
