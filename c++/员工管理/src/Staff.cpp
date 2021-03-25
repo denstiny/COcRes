@@ -86,7 +86,6 @@ bool Company::ObtainEmploy() {
 	}
 	return true;
 }
-
 // 获取员工人数
 void Company::SetLenEmploy() {
 	obs.seekg(0,ios::end);
@@ -180,8 +179,6 @@ Employees * Company::SaveEmpoly(Employees *p,Employees s) {
 	}
 	return p;
 }
-
-
 // 修改员工数据
 void Company::ModifyEmploy() {
 	char bufName[100];
@@ -196,7 +193,6 @@ void Company::ModifyEmploy() {
 		cin >> temp;
 		if(temp == 'y') {
 			obs.seekg(0);
-			// 修改数据，并临时存储在header中
 			ModifySaveEmpoly(header, p);
 			obs.seekg(0);
 			// 清空员工数据

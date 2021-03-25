@@ -6,9 +6,11 @@
       <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/a.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asdf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ja.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ja.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/jas.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/judge.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sum.java" afterDir="false" />
@@ -67,9 +69,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -77,7 +76,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.ja">
+  <component name="RunManager" selected="应用程序.jas">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="code" />
@@ -112,8 +111,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.ja" />
         <item itemvalue="应用程序.jas" />
+        <item itemvalue="应用程序.ja" />
         <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
@@ -128,7 +127,7 @@
       <updated>1616399239228</updated>
       <workItem from="1616399241660" duration="177000" />
       <workItem from="1616654480234" duration="794000" />
-      <workItem from="1616655291941" duration="3123000" />
+      <workItem from="1616655291941" duration="644000" />
     </task>
     <servers />
   </component>
