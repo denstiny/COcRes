@@ -12,10 +12,19 @@ import javax.security.auth.x500.X500Principal;
 public class oushu {
 
     public static void Print(int L_num,int N_num){
+		int s = 0;
         for(int i = L_num; i < N_num; i++) {
             if(i%2 == 0) {
                 System.out.print("偶数: "+i + "  ");
+				s++;
+				if(s == 5){
+					System.out.println();
+					s=0;
+				}
+
             }
+
+				
         }
     }
     public static void main(String[] args) {

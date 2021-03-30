@@ -1,48 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebeec322-8dca-4589-85e0-ef4ad77cf6d2" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asdf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/judge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/STL/string/find" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/STL/string/find" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/file/ls.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/#as.java#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/#hel.java#" beforeDir="false" />
+    <list default="true" id="9834f168-1a43-4cb5-bfc7-22e7e2fd5a2c" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OnePen/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OnePen/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OnePen/student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OnePen/student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hoomO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithm/ternary" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithm/ternary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithm/ternary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithm/ternary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/Flast/max" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/Flast/max" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/STL/one.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/STL/one.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/fiel/file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/fiel/file.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/huffman/a." beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.help.base.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.help.ui.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.navigator.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.urischeme.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.help.base/browser.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/he.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/he.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/for13.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/for13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/oushu.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/oushu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ja.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1q6Tr7Wase3TJa6h5CT1x0vgToo" />
+  <component name="ProjectId" id="1qSqZEjhSbiTNbehJBkhTwk9oRI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -64,95 +52,32 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OnePen" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunManager" selected="应用程序.ja">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ja" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ja" />
-      <module name="code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="jas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jas" />
-      <module name="code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="应用程序.ja" />
-        <item itemvalue="应用程序.jas" />
-        <item itemvalue="应用程序.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="ebeec322-8dca-4589-85e0-ef4ad77cf6d2" name="默认变更列表" comment="" />
-      <created>1616399239228</created>
+      <changelist id="9834f168-1a43-4cb5-bfc7-22e7e2fd5a2c" name="默认变更列表" comment="" />
+      <created>1617083394581</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1616399239228</updated>
-      <workItem from="1616399241660" duration="177000" />
-      <workItem from="1616654480234" duration="794000" />
-      <workItem from="1616655291941" duration="3123000" />
+      <updated>1617083394581</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>

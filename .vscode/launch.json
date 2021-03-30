@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Const",
+            "request": "launch",
+            "mainClass": "Const",
+            "projectName": "code_2088d932"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestStudent",
+            "request": "launch",
+            "mainClass": "TestStudent",
+            "projectName": "code_2088d932"
+        },
+        {
+            "type": "java",
+            "name": "Launch jas",
+            "request": "launch",
+            "mainClass": "jas",
+            "projectName": "code_2088d932"
+        },
+        {
             "name": "gcc - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",

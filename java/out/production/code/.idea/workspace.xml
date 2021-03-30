@@ -2,49 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebeec322-8dca-4589-85e0-ef4ad77cf6d2" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/judge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/STL/string/find" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/STL/string/find" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/file/ls.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../c++/员工管理/src/Staff.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/#as.java#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/#hel.java#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithm/ternary" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithm/ternary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithm/ternary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithm/ternary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../c++/huffman/a." beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.help.base.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.help.ui.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.navigator.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.urischeme.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.equinox.p2.ui/dialog_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.help.base/browser.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/he.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/he.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/oushu.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/oushu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +32,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -76,7 +42,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.jas">
+  <component name="RunManager" selected="应用程序.ja">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="code" />
@@ -98,21 +64,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.jas" />
         <item itemvalue="应用程序.ja" />
+        <item itemvalue="应用程序.jas" />
         <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
@@ -127,7 +95,8 @@
       <updated>1616399239228</updated>
       <workItem from="1616399241660" duration="177000" />
       <workItem from="1616654480234" duration="794000" />
-      <workItem from="1616655291941" duration="644000" />
+      <workItem from="1616655291941" duration="3123000" />
+      <workItem from="1616718960786" duration="49000" />
     </task>
     <servers />
   </component>

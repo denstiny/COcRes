@@ -1,0 +1,22 @@
+{
+  "launch.configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - jas",
+      "request": "launch",
+      "adapter": "vscode-java",
+      "console": "internalConsole",
+      "mainClass": "jas",
+      "projectName": "code_2088d932"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "adapter": "vscode-java",
+      "console": "internalConsole",
+      "mainClass": "Main",
+      "projectName": "code_2088d932"
+    }
+  ]
+}

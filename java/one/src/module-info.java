@@ -1,0 +1,3 @@
+module one {
+	System.out
+}
