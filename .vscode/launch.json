@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch List",
+            "request": "launch",
+            "mainClass": "homework.List",
+            "projectName": "code_2088d932"
+        },
+        {
+            "type": "java",
             "name": "Launch Const",
             "request": "launch",
             "mainClass": "Const",

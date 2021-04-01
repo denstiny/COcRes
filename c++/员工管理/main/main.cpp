@@ -57,5 +57,6 @@ int main(int argc,char *argv[]) {
 		entity.obs.clear();
 		entity.obs.seekg(0);
 	}
+	printf("hell world");
 	return 0;
 }
