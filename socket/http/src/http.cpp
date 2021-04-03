@@ -1,3 +1,10 @@
+/**
+ * File              : src/http.cpp
+ * Author            : denstiny <2254228017@qq.com>
+ * Date              : 04.04.2021
+ * Last Modified Date: 04.04.2021
+ * Last Modified By  : denstiny <2254228017@qq.com>
+ */
 
 #include "../include/http.hpp"
 #include <cstdio>
@@ -29,7 +36,7 @@ int ServerHander::InitServer(void) {
 
 
 	if(bind(fd, (struct sockaddr *)&serveraddr,sizeof(serveraddr) ) == -1) {
-		perror("bind erroer!");
+		perror("绑定端口错误！");
 		exit(1);
 	}
 
@@ -44,7 +51,7 @@ bool ServerHander::deal_cliet_requests(int clientfd,string &str) {
 	fstream obs(file_name,ios::in);
 	//cout << "str ==> " << str  << " <==="<< endl;
 	if(!obs.is_open()) {
-		cout << "Access to the data does not exist: " << file_name << endl;
+		cout << "对数据的访问不存在：" << file_name << endl;
 		return false;
 	}
 	while(!obs.eof()) {
@@ -52,7 +59,7 @@ bool ServerHander::deal_cliet_requests(int clientfd,string &str) {
 	}
 	obs.close();
 	if(file_name.rfind("html") != file_name.npos)
-		cout << "Return the data ==> \n " <<  str  << "\n<==" <<endl;
+		cout << "返回数据 ==> \n " <<  str  << "\n<==" <<endl;
 	write(clientfd, str.c_str(), str.length()-1);
 	
 	return true;
@@ -94,7 +101,7 @@ bool ServerHander::requests_cliet_state(int clientfd,string &str) {
 		sprintf(temp_str,Error,mime);
 		str = temp_str;
 		write(clientfd,str.c_str(),sizeof(str));
-		cout << "Access to the data does not exist: " << file_name << endl;
+		cout << "数据访问不存在: " << file_name << endl;
 		obs.close();
 		close(clientfd);
 		file_state = false;
