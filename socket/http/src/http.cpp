@@ -47,27 +47,34 @@ int ServerHander::InitServer(void) {
 
 
 // 处理客户端数据
-bool ServerHander::deal_cliet_requests(int clientfd,string &str) {
+bool ServerHander::deal_cliet_requests(int &clientfd,string &str) {
 	fstream obs(file_name,ios::in);
 	//cout << "str ==> " << str  << " <==="<< endl;
 	if(!obs.is_open()) {
 		cout << "对数据的访问不存在：" << file_name << endl;
+		//shutdown(clientfd,SHUT_WR);
 		return false;
 	}
 	while(!obs.eof()) {
 		str += obs.get();
 	}
+	str.pop_back();
 	obs.close();
-	if(file_name.rfind("html") != file_name.npos)
-		cout << "返回数据 ==> \n " <<  str  << "\n<==" <<endl;
-	write(clientfd, str.c_str(), str.length()-1);
-	
+	cout << "返回数据 ==> \n " << file_name << endl;
+	write(clientfd, str.c_str(), str.length());
+	this->client_work = false;
 	return true;
 }
 
 
-bool ServerHander::requests_cliet_state(int clientfd,string &str) {
+bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 	
+	if(clientfd == -1) {
+		shutdown(clientfd,SHUT_RDWR);	
+		close(clientfd);
+		exit(1);
+	}
+
 	char mime[100],buffer[BUFSIZ] = {0},file_name[100];
 	string Fname = FILEROOT;
 
@@ -103,8 +110,6 @@ bool ServerHander::requests_cliet_state(int clientfd,string &str) {
 		write(clientfd,str.c_str(),sizeof(str));
 		cout << "数据访问不存在: " << file_name << endl;
 		obs.close();
-		close(clientfd);
-		file_state = false;
 		return false;
 	}else {
 		sprintf(temp_str,Allow,mime);
@@ -113,5 +118,65 @@ bool ServerHander::requests_cliet_state(int clientfd,string &str) {
 		this->file_name = Fname;
 		obs.close();
 		return true;
+	}
+}
+
+
+
+/*
+	延迟包设置 
+	当客户端发送请求将重置 倒计时
+*/
+void Stop_work(ServerHander &head,int clientfd) {
+	// cout << "心跳包启动 " <<  endl;
+	if(clientfd == -1) {
+		cout << "客户端无效" << endl;
+		exit(1);
+	}
+	head.client_work = false;
+	for(int i = 0;i < 10; i++) {
+		sleep(1);
+		if(head.client_work == true)
+			 i = 0;
+		//cout << "心跳包倒计时" << i << endl;
+	}
+	cout << "客户端加载超时,断开连接" << endl;
+	//write(clientfd,SendheartBeat,sizeof(SendheartBeat));
+	shutdown(clientfd,SHUT_WR);
+	//char buffer[BUFSIZ] ;  // 并没有接受到客户端的返回信息
+	//read(clientfd,buffer,sizeof(buffer));
+	//cout << buffer << endl;
+	// close(clientfd);
+	exit(1);
+}
+
+
+/*
+	构造函数 
+*/
+
+ServerHander::ServerHander() {
+	this->client_work = false;
+	this->file_state = false;
+}
+/*
+	 析构函数
+*/
+ServerHander::~ServerHander() {
+	
+}
+
+
+bool ServerHander::Insert_work(int &clientfd,int ip) {
+	vector<int>::iterator vc = find(client_list.begin(),client_list.end(),ip);
+	/*
+		查找数据客户列表,如果没有找到,则判定为新用户,将新用户加入客户列表中,如果找到,则,判定用户重复申请不做回应
+	*/
+	if(vc == client_list.end()) { 
+		client_list.push_back(ip);
+		return true;
+	}else {
+		close(clientfd);
+		return false;
 	}
 }

@@ -1,3 +1,3 @@
 module one {
-	System.out
+	System.out.pA')
 }
