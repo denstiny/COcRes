@@ -4,6 +4,5 @@ public class Temp {
     }
     void Print(String name) {
         System.out.println("Hello wrold,This is "+name);
-
     }
 }

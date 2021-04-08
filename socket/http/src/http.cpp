@@ -112,7 +112,7 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 		obs.close();
 		return false;
 	}else {
-		sprintf(temp_str,Allow,mime);
+		sprintf(temp_str,Allow,mime,(int)getpid());
 		str = temp_str;
 		file_state = true;
 		this->file_name = Fname;
@@ -138,15 +138,9 @@ void Stop_work(ServerHander &head,int clientfd) {
 		sleep(1);
 		if(head.client_work == true)
 			 i = 0;
-		//cout << "心跳包倒计时" << i << endl;
 	}
 	cout << "客户端加载超时,断开连接" << endl;
-	//write(clientfd,SendheartBeat,sizeof(SendheartBeat));
 	shutdown(clientfd,SHUT_WR);
-	//char buffer[BUFSIZ] ;  // 并没有接受到客户端的返回信息
-	//read(clientfd,buffer,sizeof(buffer));
-	//cout << buffer << endl;
-	// close(clientfd);
 	exit(1);
 }
 

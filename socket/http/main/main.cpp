@@ -37,7 +37,6 @@ int main( int argc, char *argv[] ) {
 			断开连接
 		*/
 		pid_t pid = fork();
-		sleep(1);
 		if(pid > 0) {  		  // 主进程负责接受请求
 			if(( clientfd = accept(serverfd, (struct sockaddr *)&clinetaddr, &clientlen)  ) != -1) {
 				//if(head.Insert_work(clinetfd, clinetaddr.sin_addr.s_addr)) {
