@@ -70,7 +70,7 @@ bool ServerHander::deal_cliet_requests(int &clientfd,string &str) {
 bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 	
 	if(clientfd == -1) {
-		shutdown(clientfd,SHUT_RDWR);	
+		shutdown(clientfd,SHUT_WR);	
 		close(clientfd);
 		exit(1);
 	}
@@ -87,6 +87,7 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 		If the client access 404 data does not exist
 
 	*/
+	cout  << "客户端发送数据 ==>\n" << buffer << endl;
 	sscanf(buffer,"GET /%s",file_name);
 
 	if(strstr(file_name,".html")) {
@@ -161,16 +162,15 @@ ServerHander::~ServerHander() {
 }
 
 
-bool ServerHander::Insert_work(int &clientfd,int ip) {
-	vector<int>::iterator vc = find(client_list.begin(),client_list.end(),ip);
+bool ServerHander::Insert_work(int &clientfd,int pid) {
+	vector<int>::iterator vc = find(client_list.begin(),client_list.end(),pid);
 	/*
-		查找数据客户列表,如果没有找到,则判定为新用户,将新用户加入客户列表中,如果找到,则,判定用户重复申请不做回应
+		查找数据客户列表,如果没有找到,则判定为新用户,如果找到,则,判定用户重复申请不做回应
 	*/
 	if(vc == client_list.end()) { 
-		client_list.push_back(ip);
 		return true;
 	}else {
-		close(clientfd);
+		shutdown(clientfd,SHUT_WR);
 		return false;
 	}
 }

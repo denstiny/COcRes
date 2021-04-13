@@ -19,8 +19,7 @@ using namespace std;
 #define FILEROOT "src/lib/"
 
 
-#define Allow "HTTP/1.1 200 OK\r\nConnection: Keep-Alive\r\nContent-Type: %s\r\nSet-Cookie: PID=%d\r\n" 
-//  虽然设置了http长连接,但是发现客户端依然使用的是短连接方式,不清楚哪里出了问题 
+#define Allow "HTTP/1.1 200 OK\r\nConnection: Keep-Alive\r\nContent-Type: %s\r\nSet-Cookie: PID=%d\r\n\r\n" 
 #define Error "HTTP/1.1 404 OK\r\nContent-Type: %s\r\n\r\n"
 
 
@@ -51,7 +50,7 @@ class ServerHander {
 		/*
 			bool clinet list 
 		*/
-		bool Insert_work(int &clientfd,int ip);
+		bool Insert_work(int &clientfd,int pid);
 
 		/*
 			延迟包函数,如果超出时间没有发送请求,则关闭连接 

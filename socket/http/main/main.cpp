@@ -25,7 +25,6 @@ int main( int argc, char *argv[] ) {
 	bzero(&clinetaddr, sizeof(clinetaddr));
 	socklen_t clientlen = sizeof(clinetaddr);
 	cout << "等待连接" << endl;
-	//pid_t pid = fork();
 	while (1) {
 		/*
 		   开始执行任务
@@ -38,16 +37,18 @@ int main( int argc, char *argv[] ) {
 		*/
 		pid_t pid = fork();
 		if(pid > 0) {  		  // 主进程负责接受请求
-			if(( clientfd = accept(serverfd, (struct sockaddr *)&clinetaddr, &clientlen)  ) != -1) {
-				//if(head.Insert_work(clinetfd, clinetaddr.sin_addr.s_addr)) {
+			while(( clientfd = accept(serverfd, (struct sockaddr *)&clinetaddr, &clientlen)  ) != -1) {
+				if(head.Insert_work(clientfd, clinetaddr.sin_addr.s_addr)) {
 					cout << "客户端: " << clientfd  << "申请连接"<< endl;
-				//}
-				//else
-			//		cout << "客户端: " << clinetfd << "重复申请访问拒绝" << endl;;
-			}else {
-				perror("clinetfd error");
-				exit(1);
+					break;
+				}
+				else
+					cout << "客户端: " << clientfd << "重复申请访问拒绝" << endl;;
 			}
+			//else {
+			//	perror("clinetfd error");
+			//	exit(1);
+			//}
 			
 		}
 
