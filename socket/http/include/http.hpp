@@ -23,6 +23,29 @@ using namespace std;
 #define Error "HTTP/1.1 404 OK\r\nContent-Type: %s\r\n\r\n"
 
 
+class ServerHander;
+
+class UserList {
+	public:
+		UserList();
+		~UserList();
+	public:
+		/*
+			Add user to list 
+		*/
+		bool AddUser(string username);
+		/*
+			Search user for user list 
+		*/
+		bool SearchUser(string username);
+		/*
+			delete user for user list
+		*/
+		bool DelectUser(string username);
+		
+};
+
+
 class ServerHander {
 	public:
 		/*
@@ -32,6 +55,8 @@ class ServerHander {
 		string file_name;
 		bool file_state;
 		vector<int> client_list;
+		UserList user;
+		
 
 	public:
 		/*

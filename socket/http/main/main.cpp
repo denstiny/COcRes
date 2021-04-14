@@ -36,22 +36,23 @@ int main( int argc, char *argv[] ) {
 			断开连接
 		*/
 		pid_t pid = fork();
+
+/*
+	父进程 
+*/
 		if(pid > 0) {  		  // 主进程负责接受请求
 			while(( clientfd = accept(serverfd, (struct sockaddr *)&clinetaddr, &clientlen)  ) != -1) {
 				if(head.Insert_work(clientfd, clinetaddr.sin_addr.s_addr)) {
-					cout << "客户端: " << clientfd  << "申请连接"<< endl;
 					break;
 				}
-				else
-					cout << "客户端: " << clientfd << "重复申请访问拒绝" << endl;;
 			}
-			//else {
-			//	perror("clinetfd error");
-			//	exit(1);
-			//}
-			
 		}
 
+
+
+/*
+	子进程 
+*/
 		if(pid == 0) { 		  // 客户端负责处理请求
 		//	shutdown(serverfd,SHUT_WR);
 			close(serverfd);  // 子进程不需要服务端套接字,故关闭

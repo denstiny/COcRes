@@ -10,6 +10,8 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <fstream>
+#include <iostream>
 #include <string>
 #include <strings.h>
 #include <unistd.h>
@@ -37,7 +39,7 @@ int ServerHander::InitServer(void) {
 
 	if(bind(fd, (struct sockaddr *)&serveraddr,sizeof(serveraddr) ) == -1) {
 		perror("绑定端口错误！");
-		exit(1);
+		exit(0);
 	}
 
 	listen(fd, 100);
@@ -52,7 +54,6 @@ bool ServerHander::deal_cliet_requests(int &clientfd,string &str) {
 	//cout << "str ==> " << str  << " <==="<< endl;
 	if(!obs.is_open()) {
 		cout << "对数据的访问不存在：" << file_name << endl;
-		//shutdown(clientfd,SHUT_WR);
 		return false;
 	}
 	while(!obs.eof()) {
@@ -72,7 +73,7 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 	if(clientfd == -1) {
 		shutdown(clientfd,SHUT_WR);	
 		close(clientfd);
-		exit(1);
+		return false;
 	}
 
 	char mime[100],buffer[BUFSIZ] = {0},file_name[100];
@@ -87,7 +88,7 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 		If the client access 404 data does not exist
 
 	*/
-	cout  << "客户端发送数据 ==>\n" << buffer << endl;
+	//cout  << "客户端发送数据 ==>\n" << file_name << endl;
 	sscanf(buffer,"GET /%s",file_name);
 
 	if(strstr(file_name,".html")) {
@@ -129,10 +130,9 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 	当客户端发送请求将重置 倒计时
 */
 void Stop_work(ServerHander &head,int clientfd) {
-	// cout << "心跳包启动 " <<  endl;
 	if(clientfd == -1) {
 		cout << "客户端无效" << endl;
-		exit(1);
+		exit(0);
 	}
 	head.client_work = false;
 	for(int i = 0;i < 10; i++) {
@@ -142,7 +142,7 @@ void Stop_work(ServerHander &head,int clientfd) {
 	}
 	cout << "客户端加载超时,断开连接" << endl;
 	shutdown(clientfd,SHUT_WR);
-	exit(1);
+	exit(0);
 }
 
 
@@ -163,14 +163,102 @@ ServerHander::~ServerHander() {
 
 
 bool ServerHander::Insert_work(int &clientfd,int pid) {
-	vector<int>::iterator vc = find(client_list.begin(),client_list.end(),pid);
 	/*
 		查找数据客户列表,如果没有找到,则判定为新用户,如果找到,则,判定用户重复申请不做回应
 	*/
-	if(vc == client_list.end()) { 
-		return true;
-	}else {
-		shutdown(clientfd,SHUT_WR);
+	return true;
+}
+
+UserList::~UserList() {
+/*
+   clear user list
+*/	
+	ofstream obs("src/lib/UserList", ios::out | ios::trunc);
+	obs.close();
+}
+
+UserList::UserList() {
+/*
+	 create user list file
+*/	
+
+	ofstream obs("src/lib/UserList", ios::out | ios::trunc);
+	obs.close();
+}
+
+
+/*
+	Add user to list 
+*/
+bool UserList::AddUser(string username) {
+	ofstream obs("src/lib/UserList", ios::app);
+	if(!obs.is_open()) 
+		return false;
+	username += "\n";
+	obs.write(username.c_str(), username.length());
+	cout << "添加用户: " << username ;
+	obs.close();
+	return true;
+}
+
+/*
+	Delete user for user list 
+*/
+bool UserList::DelectUser(string username) {
+	string str = "",tempstr;
+	ifstream obs("src/lib/UserList", ios::in);
+	if(!obs.is_open()) {
+		cout << __FUNCTION__ << " open user list error" << endl;
 		return false;
 	}
+	while (!obs.eof()) {
+		getline(obs,tempstr);
+		if(str.find(username) != str.npos)
+			continue;
+		str += tempstr+"\n";
+	}
+	obs.close();
+
+	/*
+		清空数据
+	*/
+	ofstream ob("src/lib/UserList", ios::out | ios::trunc);
+	ob.close();
+
+	/*
+		重新写入 
+	*/
+	fstream file("str/lib/UserList",ios::out);
+	username = str;
+	file.write(str.c_str(), str.length());
+	file.close();
+	return true;
+}
+
+/*
+	Search user for user list
+*/
+bool UserList::SearchUser(string username) {
+	fstream obs("/mnt/home/code/socket/http/str/lib/UserList", ios::in);
+	if(!obs.is_open()) {
+		cout << __FUNCTION__ << " open user list error" << endl;
+		obs.close();
+		return false;
+	}
+	string str;
+	while (!obs.eof()) {
+		getline(obs, str);
+		
+		/*
+			找到返回 true
+		*/
+		if(str.find(username) != str.npos) {
+			obs.close();
+			return true;
+		}
+		cout << "Users ==> " << str << endl;
+		str.clear();
+	} 
+	obs.close();
+	return false;
 }
