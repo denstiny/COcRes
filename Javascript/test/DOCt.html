@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>和咯</title>
+<html>
+
+<body>
+	<script>
+		a = "httpd"
+		document.write("<h1>这是一个标题</h1>");
+		document.write("<p>这是一个段落</p>");
+		function test() { document.write(a).innerHTML="这是一个java函数" }
+		function menu() {
+			window.alert(5+8)
+		}
+		function butn() { 
+			document.getElementById("text").innerHTML = "段落修改"
+		}
+		function wtr() { 
+			document.write(Date());
+		}
+	</script>
+	<button type="button" onclick="test()">尝试一下</button>
+	<button type="button" onclick="menu()">尝试一下</button>
+	<button type="button" onclick="butn()">段落</button>
+	<button type="button" onclick="wtr()">wtr</button>
+	<text id="text">段落</text>
+</body>
+
+</html>

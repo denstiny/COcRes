@@ -7,6 +7,7 @@
  */
 
 #include "../include/http.hpp"
+#include <algorithm>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -14,13 +15,18 @@
 #include <iostream>
 #include <string>
 #include <strings.h>
+#include <thread>
 #include <unistd.h>
+#include <vector>
+
+
 
 /*
 	创建套接字 
 
 	Create a socket
 */
+
 int ServerHander::InitServer(void) {
 	int fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -130,6 +136,7 @@ bool ServerHander::requests_cliet_state(int &clientfd,string &str) {
 	当客户端发送请求将重置 倒计时
 */
 void Stop_work(ServerHander &head,int clientfd) {
+	vector<string> client_list;
 	if(clientfd == -1) {
 		cout << "客户端无效" << endl;
 		exit(0);
@@ -166,7 +173,7 @@ bool ServerHander::Insert_work(int &clientfd,int pid) {
 	/*
 		查找数据客户列表,如果没有找到,则判定为新用户,如果找到,则,判定用户重复申请不做回应
 	*/
-	return true;
+		return true;
 }
 
 UserList::~UserList() {

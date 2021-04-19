@@ -1,6 +1,7 @@
 #pragma HTTP_H
 
 #include <algorithm>
+#include <thread>
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -54,7 +55,6 @@ class ServerHander {
 		bool client_work;
 		string file_name;
 		bool file_state;
-		vector<int> client_list;
 		UserList user;
 		
 
@@ -82,6 +82,7 @@ class ServerHander {
 		*/
 		
 		friend void Stop_work(ServerHander &head,int clientfd);
+
 	public: 
 		ServerHander();
 		~ServerHander();

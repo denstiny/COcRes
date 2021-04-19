@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        var code_str = "#include&lt;stdio.h&gt;<br>int main(int argc,char **argv) {<br>  printf(\"hello wrold\")<br>return 0;}";
+        var count = 1;
+        function code() {
+            document.getElementById("code").innerHTML = code_str.substring(0, count);
+            count++;
+            if (count >= code_str.length) {
+                count = 1;
+            }
+            setTimeout(code,100);
+        }
+        onload = code;
+    </script>
+    <style type="text/css">
+        #test {
+            position: absolute;
+            color:chocolate;
+            margin:auto;
+            border:3px solid green;
+            width:50%;
+        }
+    </style>
+    <dev id = "test">
+        <p id="code" onload="buttons"></p>
+    </dev>
+    </text>
+</body>
+
+</html>

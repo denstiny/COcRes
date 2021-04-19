@@ -12,11 +12,13 @@
 #include <functional>
 #include <iterator>
 #include <strings.h>
-#include <thread>
 #include <sys/socket.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include <wait.h>
+
+
+
 
 int main( int argc, char *argv[] ) {
 	ServerHander head;
@@ -25,6 +27,10 @@ int main( int argc, char *argv[] ) {
 	bzero(&clinetaddr, sizeof(clinetaddr));
 	socklen_t clientlen = sizeof(clinetaddr);
 	cout << "等待连接" << endl;
+	pid_t pid = fork();
+
+
+
 	while (1) {
 		/*
 		   开始执行任务
@@ -35,7 +41,6 @@ int main( int argc, char *argv[] ) {
 			客户端数据,当客户端数据合法,则作出回应,并新建一个线程,在有效时间内,客户端没有继续发送请求则
 			断开连接
 		*/
-		pid_t pid = fork();
 
 /*
 	父进程 
@@ -46,6 +51,7 @@ int main( int argc, char *argv[] ) {
 					break;
 				}
 			}
+			pid = fork();
 		}
 
 
